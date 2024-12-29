@@ -1,0 +1,182 @@
+/* Global Styles */
+body {
+  background: rgb(0, 0, 0);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.9) 0%, rgba(46, 60, 79, 1) 100%);
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  color: #fff;
+}
+
+/* To-Do Container */
+.todo-container {
+  background: rgba(30, 30, 30, 0.95);
+  width: 450px;
+  margin: 0 auto;
+  border: 2px solid #1e90ff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+}
+
+/* Header */
+#header {
+  margin: 5px;
+  font-size: 24px;
+  color: #1e90ff;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Input Box */
+#input-box {
+  width: 280px;
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  font-size: 18px;
+  background-color: #333;
+  color: #fff;
+  outline: none;
+  transition: 0.3s;
+}
+
+#input-box:focus {
+  border-color: #1e90ff;
+  background-color: #222;
+}
+
+/* Add Button */
+#input-button {
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1e90ff;
+  color: #fff;
+}
+
+#input-button:hover {
+  background-color: #63a0ff;
+}
+
+/* Task List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  text-align: left;
+}
+
+li {
+  background-color: #2e2e2e;
+  border: 1px solid #444;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+li:hover {
+  background-color: #3c3c3c;
+  border-color: #1e90ff;
+}
+
+/* Task Buttons (Edit, Delete) */
+.edit-btn, .delete-btn, .complete-btn {
+  background-color: transparent;
+  color: #ff6347;
+  border: none;
+  cursor: pointer;
+  padding: 8px 15px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+  background-color: rgba(255, 99, 71, 0.2);
+}
+
+.complete-btn {
+  background-color: #32cd32;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.complete-btn:hover {
+  background-color: #28a745;
+}
+
+/* Strike-through for Completed Tasks */
+.completed {
+  text-decoration: line-through;
+  color: #888;
+  background-color: rgba(52, 58, 64, 0.5);
+  border-color: rgba(52, 58, 64, 0.7);
+}
+
+.completed .edit-btn,
+.completed .delete-btn {
+  color: #aaa;
+}
+
+/* Task Counter */
+.counter-container {
+  margin-top: 20px;
+  color: #ddd;
+  font-size: 18px;
+}
+
+#task-counters {
+  font-size: 20px;
+  color: #ccc;
+}
+
+#completed-counter,
+#uncompleted-counter {
+  color: #1e90ff;
+  font-weight: bold;
+}
+
+hr {
+  border: 1px solid #1e90ff;
+  margin-top: 20px;
+}
+
+/* Additional Enhancements */
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+input[type="checkbox"]:checked + span {
+  color: #32cd32;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .todo-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  #input-box {
+    width: 70%;
+  }
+
+  #input-button {
+    width: 25%;
+  }
+}
